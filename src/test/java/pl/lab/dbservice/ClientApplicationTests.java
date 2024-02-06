@@ -1,4 +1,4 @@
-package pl.lab.client;
+package pl.lab.dbservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

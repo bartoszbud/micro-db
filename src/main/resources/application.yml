@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: micro-db
+
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:10.0.0.26}:3306/db_micro
+    username: micro
+    password: micro123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+jpa:
+  hibernate:
+    ddl-auto: update
+
+
+
