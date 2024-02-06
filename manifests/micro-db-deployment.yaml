@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: micro-db
+  labels:
+    app: micro-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: micro-db
+  template:
+    metadata:
+      labels:
+        app: micro-db
+    spec:
+      containers:
+        - name: micro-db
+          image: bartoszbud/micro-db:DEV-SNAPSHOT
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9000
