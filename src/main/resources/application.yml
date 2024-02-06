@@ -1,6 +1,12 @@
+server:
+  port: 9000
+
 spring:
   application:
     name: micro-db
+  cloud:
+    config:
+      enabled: false
 
   datasource:
     url: jdbc:mysql://${MYSQL_HOST:10.0.0.26}:3306/db_micro
