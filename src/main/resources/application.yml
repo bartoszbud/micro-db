@@ -7,6 +7,12 @@ spring:
   cloud:
     config:
       enabled: false
+  boot:
+    admin:
+      client:
+        url: http://spring-admin-service/
+        instance:
+          prefer-ip: true
 
   datasource:
     url: jdbc:mysql://${MYSQL_HOST:10.0.0.26}:3306/db_micro
@@ -14,6 +20,10 @@ spring:
     password: micro123
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://spring-registry-service/
 jpa:
   hibernate:
     ddl-auto: update
